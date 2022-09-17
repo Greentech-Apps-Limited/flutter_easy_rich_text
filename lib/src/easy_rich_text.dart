@@ -272,7 +272,7 @@ class EasyRichText extends StatelessWidget {
         dotAll: dotAll,
       ).hasMatch(targetString);
 
-      bool isArabic = RegExp(r"[\u0621-\u064A]+",
+      bool isArabic = RegExp(r"[\u0600-\u06FF :]{3,}",
               caseSensitive: caseSensitive, unicode: unicode)
           .hasMatch(targetString);
 
